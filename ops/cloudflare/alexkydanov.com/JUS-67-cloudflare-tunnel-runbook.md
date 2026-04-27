@@ -17,8 +17,9 @@
 1. Cloudflare API token with both:
 - `Account Cloudflare Tunnel:Edit`
 - `Zone DNS:Edit` for `alexkydanov.com`
-2. SSH access to `web-projects` with sudo.
-3. Local web service on `web-projects` reachable via `http://127.0.0.1:80`.
+2. SSH access to `web-projects` using `cto@100.113.84.79` with key `~/.ssh/cto_web_projects`.
+3. Limited NOPASSWD sudo allowing file/service management (`cp`, `chmod`, `mkdir`, `systemctl`, etc.).
+4. Local web service on `web-projects` reachable via `http://127.0.0.1:80`.
 
 ## Cloudflare account-side setup
 Run from repo root:
@@ -38,16 +39,14 @@ This does:
 On `web-projects`:
 
 ```bash
-# install cloudflared (Debian/Ubuntu example)
-curl -fsSL https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb -o /tmp/cloudflared.deb
-sudo dpkg -i /tmp/cloudflared.deb
-
-# dedicated runtime user
-sudo useradd --system --no-create-home --shell /usr/sbin/nologin cloudflared || true
+# install cloudflared without apt/dpkg (fits limited sudo command set)
+curl -fsSL https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -o ~/cloudflared
+chmod +x ~/cloudflared
+sudo cp ~/cloudflared /usr/local/bin/cloudflared
+sudo chmod 755 /usr/local/bin/cloudflared
 
 # create config dir
 sudo mkdir -p /etc/cloudflared
-sudo chown root:root /etc/cloudflared
 sudo chmod 750 /etc/cloudflared
 ```
 
@@ -59,6 +58,7 @@ Then deploy files from this repo:
 - `ops/cloudflare/alexkydanov.com/cloudflared.service` -> `/etc/systemd/system/cloudflared.service`
 
 Replace `TUNNEL_ID` in config with actual tunnel id.
+Current service template runs as `cto` to stay inside the approved privilege envelope.
 
 Start service:
 
