@@ -1,0 +1,12 @@
+# Place on web-projects: /etc/cloudflared/config.yml
+# Replace TUNNEL_ID with value from ops/cloudflare/alexkydanov.com/tunnel-bootstrap-output.json
+
+tunnel: TUNNEL_ID
+credentials-file: /etc/cloudflared/TUNNEL_ID.json
+
+ingress:
+  - hostname: alexkydanov.com
+    service: http://127.0.0.1:80
+  - hostname: www.alexkydanov.com
+    service: http://127.0.0.1:80
+  - service: http_status:404

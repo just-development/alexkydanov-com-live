@@ -1,0 +1,106 @@
+{
+  "result": [
+    {
+      "id": "a87f66678d6751412f69c0db4ee2beb5",
+      "name": "alexkydanov.com",
+      "type": "A",
+      "content": "185.199.108.153",
+      "proxiable": true,
+      "proxied": false,
+      "ttl": 1,
+      "settings": {},
+      "meta": {},
+      "comment": null,
+      "tags": [],
+      "created_on": "2026-04-27T07:07:17.382337Z",
+      "modified_on": "2026-04-27T07:07:17.382337Z"
+    },
+    {
+      "id": "fd209ff63524a404027309c194f9a1b4",
+      "name": "alexkydanov.com",
+      "type": "A",
+      "content": "185.199.109.153",
+      "proxiable": true,
+      "proxied": false,
+      "ttl": 1,
+      "settings": {},
+      "meta": {},
+      "comment": null,
+      "tags": [],
+      "created_on": "2026-04-27T07:07:16.600831Z",
+      "modified_on": "2026-04-27T07:07:16.600831Z"
+    },
+    {
+      "id": "b12f722fac0739b68ef2dc5413b767ae",
+      "name": "alexkydanov.com",
+      "type": "A",
+      "content": "185.199.110.153",
+      "proxiable": true,
+      "proxied": false,
+      "ttl": 1,
+      "settings": {},
+      "meta": {},
+      "comment": null,
+      "tags": [],
+      "created_on": "2026-04-27T07:07:15.78249Z",
+      "modified_on": "2026-04-27T07:07:15.78249Z"
+    },
+    {
+      "id": "6c8c1f068a57c7d2e86b320a168c117a",
+      "name": "alexkydanov.com",
+      "type": "A",
+      "content": "185.199.111.153",
+      "proxiable": true,
+      "proxied": false,
+      "ttl": 1,
+      "settings": {},
+      "meta": {},
+      "comment": null,
+      "tags": [],
+      "created_on": "2026-04-20T19:27:25.935858Z",
+      "modified_on": "2026-04-27T07:07:14.630706Z"
+    },
+    {
+      "id": "99bce55e905633d2a038b64d64139ff9",
+      "name": "www.alexkydanov.com",
+      "type": "CNAME",
+      "content": "just-development.github.io",
+      "proxiable": true,
+      "proxied": false,
+      "ttl": 1,
+      "settings": {
+        "flatten_cname": false
+      },
+      "meta": {},
+      "comment": null,
+      "tags": [],
+      "created_on": "2026-04-20T19:27:26.41217Z",
+      "modified_on": "2026-04-27T07:07:15.058417Z"
+    },
+    {
+      "id": "271730969da9b56944199624e574e676",
+      "name": "alexkydanov.com",
+      "type": "TXT",
+      "content": "\"google-site-verification=4eHG4fhBFbw2iqg_qQFDPd7OIagl52bQiafqdsNEpF8\"",
+      "proxiable": false,
+      "proxied": false,
+      "ttl": 3600,
+      "settings": {},
+      "meta": {},
+      "comment": null,
+      "tags": [],
+      "created_on": "2026-04-20T20:03:57.732851Z",
+      "modified_on": "2026-04-20T20:03:57.732851Z"
+    }
+  ],
+  "success": true,
+  "errors": [],
+  "messages": [],
+  "result_info": {
+    "page": 1,
+    "per_page": 100,
+    "count": 6,
+    "total_count": 6,
+    "total_pages": 1
+  }
+}
